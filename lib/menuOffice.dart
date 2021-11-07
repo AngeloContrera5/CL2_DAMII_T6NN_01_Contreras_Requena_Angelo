@@ -1,8 +1,9 @@
 // ignore_for_file: file_names
-import 'dart:ui';
+//import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
+// ignore: must_be_immutable
 class MenuOffice extends StatefulWidget {
   MenuOffice({Key? key, required this.tittle}) : super(key: key);
   final String tittle;
@@ -58,7 +59,7 @@ class _MenuOfficeState extends State<MenuOffice> {
       body: ListView(
         padding: const EdgeInsets.all(10),
         children: [
-          Text(
+          const Text(
             "Bienvenido por favor complete sus datos para completar sus pedidos",
             style: TextStyle(fontSize: 20),
           ),
@@ -66,7 +67,7 @@ class _MenuOfficeState extends State<MenuOffice> {
             padding: const EdgeInsets.all(15.0),
             child: TextField(
               controller: _txtNombres,
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 hintText: "Ingresa Nombres",
                 labelText: "Nombre",
               ),
@@ -76,7 +77,7 @@ class _MenuOfficeState extends State<MenuOffice> {
             padding: const EdgeInsets.all(15.0),
             child: TextField(
               controller: _txtPedido,
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 hintText: "Ingresa Pedido",
                 labelText: "Pedido",
               ),
@@ -86,7 +87,7 @@ class _MenuOfficeState extends State<MenuOffice> {
             padding: const EdgeInsets.all(15.0),
             child: TextField(
               controller: _txtPrecio,
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 hintText: "Ingresa Precio",
                 labelText: "Precio",
               ),
@@ -96,7 +97,7 @@ class _MenuOfficeState extends State<MenuOffice> {
             padding: const EdgeInsets.all(15.0),
             child: TextField(
               controller: _txtCantidad,
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 hintText: "Ingresa Cantidad",
                 labelText: "Cantidad",
               ),
@@ -109,8 +110,8 @@ class _MenuOfficeState extends State<MenuOffice> {
               Text("Descuento : " + widget.descuento.toString()),
             ],
           ),
-          SizedBox(height: 10),
-          Center(
+          const SizedBox(height: 10),
+          const Center(
             child: Text(
               "Delivery:",
               style: TextStyle(fontWeight: FontWeight.bold),
@@ -126,12 +127,12 @@ class _MenuOfficeState extends State<MenuOffice> {
             activeTrackColor: Colors.greenAccent[100],
             activeColor: Colors.greenAccent[400],
           ),
-          SizedBox(height: 10),
+          const SizedBox(height: 10),
           Padding(
             padding: const EdgeInsets.all(15.0),
             child: TextField(
               controller: _txtTotalPagar,
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 hintText: "Ingresa Total a Pagar",
                 labelText: "Total a Pagar",
               ),
@@ -139,7 +140,7 @@ class _MenuOfficeState extends State<MenuOffice> {
           ),
           RaisedButton(
             onPressed: mostrarResultados,
-            child: Text("Calcular"),
+            child: const Text("Calcular"),
             color: Colors.indigo[200],
           )
         ],
